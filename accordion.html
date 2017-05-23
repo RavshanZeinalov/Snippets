@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/wuvudoyavo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>accordion</title>
+<style id="jsbin-css">
+ul
+	margin: 0
+	padding: 0
+
+li
+	list-style-type: none
+
+.accordion
+	background: #959515
+	width: 250px
+	margin: 100px auto 0 auto
+	color: #fff
+	box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.6), 0 0 200px 1px rgba(255, 255, 255, 0.5)
+
+	a
+		color: #fff
+		text-decoration: none
+		font-size: 13px
+		font-weight: 900
+		line-height: 27px
+		display: block
+		padding: 0 15px
+		transition: all .15s
+		&:hover
+			background: #345933
+			border-left: 5px solid lightgreen
+
+.accordion__title-sub-items
+	margin: 0
+	padding: 0 10px
+	font-size: 14px
+	line-height: 34px
+	cursor: pointer
+	background: #345943
+	border-bottom: 1px solid #000
+
+.wrap-sub-items
+	display: none
+
+.accordion__active-item
+	.wrap-sub-items
+		display: block
+
+</style>
+</head>
+<body>
+	<div class="accordion">
+		<ul>
+			<li class="accordion__active-item">
+				<h3 class="accordion__title-sub-items">Dashboard</h3>
+				<ul class="wrap-sub-items">
+					<li><a href="#">Reports</a></li>
+					<li><a href="#">Search</a></li>
+					<li><a href="#">Graphs</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3 class="accordion__title-sub-items">Tasks</h3>
+				<ul class="wrap-sub-items">
+					<li><a href="#">Today's tasks</a></li>
+					<li><a href="#">Urgent</a></li>
+					<li><a href="#">Overdues</a></li>
+					<li><a href="#">Recurring</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3 class="accordion__title-sub-items">Calendar</h3>
+				<ul class="wrap-sub-items">
+					<li><a href="#">Current Month</a></li>
+					<li><a href="#">Current Week</a></li>
+					<li><a href="#">Previous Month</a></li>
+					<li><a href="#">Previous Week</a></li>
+					<li><a href="#">Next Month</a></li>
+					<li><a href="#">Next Week</a></li>
+					<li><a href="#">Team Calendar</a></li>
+					<li><a href="#">Private Calendar</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3 class="accordion__title-sub-items">Favourites</h3>
+				<ul class="wrap-sub-items">
+					<li><a href="#">Global favs</a></li>
+					<li><a href="#">My favs</a></li>
+					<li><a href="#">Team favs</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<script id="jsbin-javascript">
+$(".accordion__title-sub-items").click(function(){
+	$(".wrap-sub-items").slideUp();
+	if(!$(this).next().is(":visible")) {
+		$(this).next().slideDown();
+	}
+});
+</script>
+</body>
+</html>

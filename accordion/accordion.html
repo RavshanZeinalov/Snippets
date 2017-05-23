@@ -13,51 +13,50 @@ Released under the MIT license: http://jsbin.mit-license.org
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>accordion</title>
-<style id="jsbin-css">
-ul
-	margin: 0
-	padding: 0
+	<style id="jsbin-css">
+		ul
+			margin: 0
+			padding: 0
 
-li
-	list-style-type: none
+		li
+			list-style-type: none
 
-.accordion
-	background: #959515
-	width: 250px
-	margin: 100px auto 0 auto
-	color: #fff
-	box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.6), 0 0 200px 1px rgba(255, 255, 255, 0.5)
+		.accordion
+			background: #959515
+			width: 250px
+			margin: 100px auto 0 auto
+			color: #fff
+			box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.6), 0 0 200px 1px rgba(255, 255, 255, 0.5)
 
-	a
-		color: #fff
-		text-decoration: none
-		font-size: 13px
-		font-weight: 900
-		line-height: 27px
-		display: block
-		padding: 0 15px
-		transition: all .15s
-		&:hover
-			background: #345933
-			border-left: 5px solid lightgreen
+			a
+				color: #fff
+				text-decoration: none
+				font-size: 13px
+				font-weight: 900
+				line-height: 27px
+				display: block
+				padding: 0 15px
+				transition: all .15s
+				&:hover
+					background: #345933
+					border-left: 5px solid lightgreen
 
-.accordion__title-sub-items
-	margin: 0
-	padding: 0 10px
-	font-size: 14px
-	line-height: 34px
-	cursor: pointer
-	background: #345943
-	border-bottom: 1px solid #000
+		.accordion__title-sub-items
+			margin: 0
+			padding: 0 10px
+			font-size: 14px
+			line-height: 34px
+			cursor: pointer
+			background: #345943
+			border-bottom: 1px solid #000
 
-.wrap-sub-items
-	display: none
+		.wrap-sub-items
+			display: none
 
-.accordion__active-item
-	.wrap-sub-items
-		display: block
-
-</style>
+		.accordion__active-item
+			.wrap-sub-items
+				display: block
+	</style>
 </head>
 <body>
 	<div class="accordion">
@@ -108,13 +107,13 @@ li
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
-<script id="jsbin-javascript">
-$(".accordion__title-sub-items").click(function(){
-	$(".wrap-sub-items").slideUp();
-	if(!$(this).next().is(":visible")) {
-		$(this).next().slideDown();
-	}
-});
-</script>
+	<script id="jsbin-javascript">
+	$(".accordion__title-sub-items").click(function(){
+		$(".wrap-sub-items").slideUp();
+		if(!$(this).next().is(":visible")) {
+			$(this).next().slideDown();
+		}
+	});
+	</script>
 </body>
 </html>
